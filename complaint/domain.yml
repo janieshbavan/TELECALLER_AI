@@ -1,0 +1,56 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_weather
+  - register_complaint
+  - ask_help
+
+entities:
+  - issue_description
+  - contact_info
+
+slots:
+  issue_description:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        entity: issue_description
+  contact_info:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        entity: contact_info
+
+responses:
+  utter_greet:
+    - text: "வணக்கம் மச்சி! எப்படி இருக்கீங்க?"
+    - text: "ஹாய் டா! ரொம்ப நாளாச்சு பாக்காம"
+  utter_goodbye:
+    - text: "சரி சார்! பாக்கலாம்"
+    - text: "வணக்கம் டா! நல்லா இரு"
+  utter_affirm:
+    - text: "சூப்பர் சார், நல்லா செஞ்சீங்க"
+    - text: "அதான் நானும் சொல்லுறேன்"
+  utter_deny:
+    - text: "சரி மச்சி, வேறது பாக்கலாம்"
+    - text: "வேணாம் நம்ம அப்படி பண்ணல"
+  utter_ask_weather:
+    - text: "இப்போ சென்னைல கொஞ்சம் வெயில்தான் இருக்கு"
+    - text: "மழை வர வாய்ப்பு இருக்கு மச்சி!"
+  utter_ask_help:
+    - text: "எனக்கு என்ன உதவி வேணும் னு சொல்லுங்க மச்சி!"
+    - text: "உங்க பிரச்சனை என்ன? சொல்லுங்க பாப்போம்."
+  utter_complaint_received:
+    - text: "உங்கள் குறைப்பு பதிவு செய்யப்பட்டது. நாங்கள் விரைவில் தொடர்புகொள்வோம்!"
+    - text: "உங்களது குறைப்பு பதிவு செய்யப்பட்டுள்ளது. நன்றி!"
+  utter_complaint_failed:
+    - text: "மன்னிக்கவும், குறைப்பு பதிவு செய்ய முடியவில்லை. தயவுசெய்து மீண்டும் முயற்சிக்கவும்."
+
+actions:
+  - action_register_complaint

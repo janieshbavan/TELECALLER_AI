@@ -1,0 +1,5 @@
+speechrecognition
+gTTS
+playsound==1.2.2
+requests
+pyaudio

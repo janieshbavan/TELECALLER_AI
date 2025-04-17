@@ -1,0 +1,16 @@
+version: "3.1"
+stories:
+- story: regional convo
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_help
+    - action: utter_ask_help
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: register complaint
+  steps:
+    - intent: register_complaint
+    - action: action_register_complaint
+    - action: utter_complaint_received

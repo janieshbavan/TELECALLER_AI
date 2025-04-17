@@ -1,0 +1,9 @@
+{
+  "0": "affirm",
+  "1": "ask_help",
+  "2": "ask_weather",
+  "3": "deny",
+  "4": "goodbye",
+  "5": "greet",
+  "6": "register_complaint"
+}

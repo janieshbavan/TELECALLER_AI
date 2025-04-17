@@ -1,0 +1,32 @@
+version: "3.1"
+rules:
+- rule: Say hello back when greeted
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye when user says so
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Respond to affirm
+  steps:
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Respond to deny
+  steps:
+    - intent: deny
+    - action: utter_deny
+
+- rule: Give weather info
+  steps:
+    - intent: ask_weather
+    - action: utter_ask_weather
+
+- rule: Register a complaint
+  steps:
+    - intent: register_complaint
+    - action: action_register_complaint
+    - action: utter_complaint_received
