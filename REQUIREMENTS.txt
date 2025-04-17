@@ -1,0 +1,6 @@
+SpeechRecognition
+requests
+gTTS
+playsound
+pyaudio
+rasa
